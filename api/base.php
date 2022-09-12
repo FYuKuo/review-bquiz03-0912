@@ -131,4 +131,8 @@ function to($url)
 
 $today = date("Y-m-d");
 $todayF = date("Ymd");
+
+$Movie = new DB('movie');
+$Order = new DB('order');
+$Poster = new DB('poster');
 ?>
