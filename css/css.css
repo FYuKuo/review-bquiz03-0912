@@ -354,6 +354,6 @@ input:focus
 	height: 400px;
 }
 .order_list {
-	background-color: #a8c7fd;
-	height: 400px;
+	/* background-color: #a8c7fd; */
+	height: 360px;
 }
