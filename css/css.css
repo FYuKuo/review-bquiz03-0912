@@ -399,3 +399,8 @@ input:focus
 .hasPeople {
 	background-image: url(../icon/03D03.png);
 }
+
+
+.order_item:not(:last-child) {
+	border-bottom: 1px solid black;
+}
