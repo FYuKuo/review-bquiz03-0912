@@ -1,5 +1,10 @@
+<?php
+if(isset($_SESSION['admin'])){
+    to('./back.php');
+}
+?>
 <div class="rb ct mytitle p-10">管理登入</div>
-<table class="ct">
+<table class="aut">
     <tr>
         <td>
             帳號：
