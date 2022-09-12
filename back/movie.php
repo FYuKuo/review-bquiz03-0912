@@ -22,6 +22,17 @@
                     <div class="w-33">上映時間：<?=$row['date']?></div>
                 </div>
                 <div style="text-align: right;" class="my-10">
+                <?php
+                if($row['sh'] == 1){
+                ?>
+                    <input type="button" value="顯示" onclick="sh(<?=$row['id']?>,0,'movie')">
+                <?php
+                }else{
+                ?>
+                    <input type="button" value="隱藏" onclick="sh(<?=$row['id']?>,1,'movie')">
+                <?php
+                }
+                ?>
                 <input type="button" value="往上" onclick="rank(<?=$row['id']?>,<?=$pre?>,'movie')">
                 <input type="button" value="往下" onclick="rank(<?=$row['id']?>,<?=$next?>,'movie')">
                 <input type="button" value="編輯" onclick="to('?do=edit_movie&id=<?=$row['id']?>')">

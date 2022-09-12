@@ -370,3 +370,32 @@ input:focus
 .f-w {
 	flex-wrap: wrap;
 }
+
+.book_bg {
+	background-image: url(../icon/03D04.png);
+	background-repeat: no-repeat;
+	width: 540px;
+	height: 370px;
+}
+
+.set_group {
+	/* background-color: #a8c7fd; */
+	padding-top: 17px;
+	width: 320px;
+	height: 342px;
+}
+
+.set_item {
+	width: calc(320px / 5);
+	height: calc(342px / 4);
+	background-image: url(../icon/03D02.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.hasPeople {
+	background-image: url(../icon/03D03.png);
+}
