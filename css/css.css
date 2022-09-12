@@ -350,8 +350,8 @@ input:focus
 	height: 200px;
 }
 .movie_list {
-	background-color: #a8c7fd;
-	height: 300px;
+	/* background-color: #a8c7fd; */
+	height: 400px;
 }
 .order_list {
 	background-color: #a8c7fd;
