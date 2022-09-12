@@ -2,12 +2,12 @@
     <h1>預告片介紹</h1>
     <div class="rb tab" style="width:95%;">
         <div class="poster">
-            <div class="lists d-f a-c j-c" style="height: 70%;">
+            <div class="lists d-f a-c j-c p-r" style="height: 70%;">
             <?php
             $posters = $Poster->all(['sh'=>1]," ORDER BY `rank`");
             foreach ($posters as $key => $poster) {
             ?>
-            <div class=" poster_item d-n" data-ani="<?=$poster['ani']?>">
+            <div class=" poster_item d-n p-a" data-ani="<?=$poster['ani']?>">
                 <img src="./img/<?=$poster['img']?>" alt="" style="height: 250px;">
                 <div class="ct"><?=$poster['name']?></div>
             </div>
@@ -22,8 +22,11 @@
                 <?php
                 foreach ($posters as $key => $poster) {
                 ?>
-                <div class="icon_item p-10 d-f a-c cup" onclick="ani(<?=$key?>)">
+                <div class="icon_item p-10 d-f a-c cup f-w" onclick="ani(<?=$key?>)">
                 <img src="./img/<?=$poster['img']?>" alt="" style="height: 80px;">
+                <div class="fs-12">
+                    <?=$poster['name']?>
+                </div>
                 </div>
                 <?php
                 }
@@ -188,22 +191,23 @@
 
         switch (type) {
             case 'left':
-                if(page >= 0 && page < pages){
-                    page++;
-                    move = parseInt(nowLeft)-90;
-                }
-            break;
-
-            case 'right':
                 if(page > 0 ){
                     page--;
                     move = parseInt(nowLeft)+90;
                 }
             break;
+
+            case 'right':
+
+                if(page >= 0 && page < pages){
+                    page++;
+                    move = parseInt(nowLeft)-90;
+                }
+            break;
         
         }
 
-        $('.icons').animate({left:move});
+        $('.icons').css('left',move);
     }
 
 
